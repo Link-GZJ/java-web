@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class GetDispatcher {
@@ -12,7 +13,7 @@ public class GetDispatcher {
     String[] parameterNames;//方法参数名称
     Class<?>[] parameterClasses;//方法参数类型
 
-    public ModelAndView invoke(HttpServletRequest request, HttpServletResponse response) throws Exception{
+    public ModelAndView invoke(HttpServletRequest request, HttpServletResponse response) throws InvocationTargetException, IllegalAccessException {
         Object[] arguments = new Object[parameterClasses.length];
         for (int i = 0; i < parameterClasses.length; i++) {
             String parameterName = parameterNames[i];
