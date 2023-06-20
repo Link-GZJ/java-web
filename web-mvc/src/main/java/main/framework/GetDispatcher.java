@@ -7,12 +7,20 @@ import jakarta.servlet.http.HttpSession;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class GetDispatcher {
+public class GetDispatcher extends AbstractDispatcher{
     Object instance;//Controller实例
     Method method;//Controller方法
     String[] parameterNames;//方法参数名称
     Class<?>[] parameterClasses;//方法参数类型
 
+    public GetDispatcher(Object instance, Method method, String[] parameterNames, Class<?>[] parameterClasses) {
+        this.instance = instance;
+        this.method = method;
+        this.parameterNames = parameterNames;
+        this.parameterClasses = parameterClasses;
+    }
+
+    @Override
     public ModelAndView invoke(HttpServletRequest request, HttpServletResponse response) throws InvocationTargetException, IllegalAccessException {
         Object[] arguments = new Object[parameterClasses.length];
         for (int i = 0; i < parameterClasses.length; i++) {
