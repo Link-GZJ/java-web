@@ -53,9 +53,7 @@ public class UserController {
     @GetMapping("/user/profile")
     public ModelAndView profile(HttpSession session) {
         User user = (User) session.getAttribute("user");
-        if (user == null) {
-            return new ModelAndView("redirect:/signin");
-        }
+
         return new ModelAndView("/profile.html","user",user);
     }
 }
