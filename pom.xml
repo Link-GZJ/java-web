@@ -13,6 +13,7 @@
         <module>session-cookie</module>
         <module>web-mvc</module>
         <module>web-mvc02</module>
+        <module>web-filter-signature</module>
     </modules>
 
     <properties>
