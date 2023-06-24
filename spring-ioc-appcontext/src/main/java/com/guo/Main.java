@@ -11,7 +11,7 @@ public class Main {
 //        MailService mailService = factory.getBean(MailService.class);
         ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
         UserService userService = context.getBean(UserService.class);
-        User user = userService.login("bob@example.com", "password");
+        User user = userService.login("bob@example.com", "no");
         System.out.println(user.getName());
     }
 }
