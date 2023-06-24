@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userService" class="com.guo.learn.service.UserService">
+        <property name="mailService" ref="mailService" />
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean id="mailService" class="com.guo.learn.service.MailService" />
+    <bean id="userDao" class="com.guo.learn.dao.UserDao">
+        <property name="url" value="jdbc:mysql://192.168.189.128:3306/fruitdb?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false"/>
+        <property name="userName" value="root"/>
+        <property name="password" value="123456"/>
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+    </bean>
+</beans>

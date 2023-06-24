@@ -16,6 +16,7 @@
         <module>web-filter-signature</module>
         <module>web-listener</module>
         <module>web-deploy</module>
+        <module>spring-ioc-appcontext</module>
     </modules>
 
     <properties>
