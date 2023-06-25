@@ -17,6 +17,7 @@
         <module>web-listener</module>
         <module>web-deploy</module>
         <module>spring-ioc-appcontext</module>
+        <module>spring-ioc-annnotation</module>
     </modules>
 
     <properties>
