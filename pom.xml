@@ -18,6 +18,7 @@
         <module>web-deploy</module>
         <module>spring-ioc-appcontext</module>
         <module>spring-ioc-annotation</module>
+        <module>spring-ioc-scope</module>
     </modules>
 
     <properties>
