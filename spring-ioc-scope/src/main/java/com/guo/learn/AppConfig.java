@@ -3,6 +3,7 @@ package com.guo.learn;
 import com.guo.learn.bean.DataSourceFactoryBean;
 import com.guo.learn.bean.Mail;
 import com.guo.learn.bean.Validators;
+import com.guo.learn.resource.AppService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
@@ -32,6 +33,7 @@ public class AppConfig {
 
        */
 
+        /*
         // factorybean 的应用
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         DataSourceFactoryBean bean = context.getBean(DataSourceFactoryBean.class);
@@ -47,7 +49,12 @@ public class AppConfig {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
+
+        //@resource 应用
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppService bean = context.getBean(AppService.class);
+        System.out.println(bean.getLogo());
     }
 
     /*
