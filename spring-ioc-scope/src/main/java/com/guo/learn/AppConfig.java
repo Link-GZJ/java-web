@@ -4,6 +4,7 @@ import com.guo.learn.bean.DataSourceFactoryBean;
 import com.guo.learn.bean.Mail;
 import com.guo.learn.bean.Validators;
 import com.guo.learn.resource.AppService;
+import com.guo.learn.resource.PropertiesUtil;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
@@ -53,8 +54,10 @@ public class AppConfig {
 
         //@resource 应用
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        AppService bean = context.getBean(AppService.class);
-        System.out.println(bean.getLogo());
+//        AppService bean = context.getBean(AppService.class);
+//        System.out.println(bean.getLogo());
+        PropertiesUtil bean = context.getBean(PropertiesUtil.class);
+        System.out.println(bean.getProperties().get("test"));
     }
 
     /*
