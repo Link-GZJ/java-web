@@ -21,6 +21,7 @@
         <module>spring-ioc-scope</module>
         <module>spring-ioc-properties</module>
         <module>spring-aop-aspect</module>
+        <module>spring-aop-field</module>
     </modules>
 
     <properties>
