@@ -20,6 +20,7 @@
         <module>spring-ioc-annotation</module>
         <module>spring-ioc-scope</module>
         <module>spring-ioc-properties</module>
+        <module>spring-aop-aspect</module>
     </modules>
 
     <properties>
