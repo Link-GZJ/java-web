@@ -1,5 +1,6 @@
 package com.guo.learn.service;
 
+import com.guo.learn.aspect.MetricTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +25,7 @@ public class UserService {
             new User(2, "alice@example.com", "password", "Alice"), // alice
             new User(3, "tom@example.com", "password", "Tom"))); // tom
 
+    @MetricTime("login")
     public User login(String email, String password) {
         List<User> userList = new ArrayList<>();
         try (Connection connection = dataSource.getConnection()) {
