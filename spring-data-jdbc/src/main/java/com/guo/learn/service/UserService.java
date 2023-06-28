@@ -3,6 +3,7 @@ package com.guo.learn.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,6 +13,7 @@ public class UserService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Transactional(rollbackFor = {RuntimeException.class})
     public User getUserById(long id) {
         return jdbcTemplate.execute((Connection con) -> {
             try (PreparedStatement ps = con.prepareStatement("select * from users where id = ?")){

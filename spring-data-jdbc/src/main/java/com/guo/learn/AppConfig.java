@@ -7,12 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan
 @PropertySource("jdbc.properties")
+@EnableTransactionManagement
 public class AppConfig {
     @Value("${jdbc.url}")
     String jdbcUrl;
