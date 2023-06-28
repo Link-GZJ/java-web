@@ -1,5 +1,6 @@
 package com.guo.learn;
 
+import com.guo.learn.dao.UserDao;
 import com.guo.learn.service.UserService;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
