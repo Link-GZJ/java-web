@@ -1,0 +1,1 @@
+curl http://localhost:8080/upload/file -v -d "test-data" -H "Signature-Method: SHA-1" -H "Signature: 7115e9890f5b5cc6914bdfa3b7c011db1cdafedb"  -H "Content-Type: application/octet-stream"
