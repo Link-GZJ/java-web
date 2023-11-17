@@ -23,6 +23,7 @@
         <module>spring-aop-aspect</module>
         <module>spring-aop-field</module>
         <module>spring-data-jdbc</module>
+        <module>java-mail</module>
     </modules>
 
     <properties>
