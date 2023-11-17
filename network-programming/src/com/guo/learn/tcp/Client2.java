@@ -1,12 +1,12 @@
-package com.guo.learn;
+package com.guo.learn.tcp;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Client {
+public class Client2 {
     public static void main(String[] args) {
-        try(Socket socket = new Socket("192.168.1.193",7777)){
+        try(Socket socket = new Socket("localhost",7777)){
             try (InputStream input = socket.getInputStream();
                  OutputStream output = socket.getOutputStream()){
                 handle(input,output);

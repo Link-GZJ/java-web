@@ -1,9 +1,13 @@
-package com.guo.learn;
+package com.guo.learn.tcp;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * @author guozongjun
+ * @version 1.0
+ */
 public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket server = new ServerSocket(7777);//指定端口
